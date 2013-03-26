@@ -1,8 +1,8 @@
-#import('dart:html');
+import 'dart:html';
 
 
 //A list of elements
-interface View {
+abstract class View {
   List<Element> elements;
 }
 
@@ -22,7 +22,7 @@ class Grid implements View {
   
   //returns a list of elements to be added to the DOM.
   //implements View interface
-  List<Element> get elements() {
+  List<Element> get elements {
     List<Element> result = new List<Element>();
 
     _bindHeader();
